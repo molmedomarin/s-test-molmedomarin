@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mycompany</groupId>
+	<groupId>f410b1b4-6203-4154-a14a-d77dd6823489</groupId>
 	<artifactId>s-test-molmedomarin-imp</artifactId>
 	<version>1.0.0</version>
 	<packaging>mule-application</packaging>
@@ -21,7 +21,7 @@
         <repository>
             <id>anypoint-exchange</id>
             <name>Anypoint Exchange Repository</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/d36a1128-e322-46b8-b0ff-0e2971ea1aea/maven</url>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/f410b1b4-6203-4154-a14a-d77dd6823489/maven</url>
             <layout>default</layout>
         </repository>
     </distributionManagement>
