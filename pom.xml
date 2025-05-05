@@ -17,6 +17,15 @@
 		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 	</properties>
 
+	<distributionManagement>
+        <repository>
+            <id>anypoint-exchange-v3</id>
+            <name>Anypoint Exchange Repository</name>
+            <url>https://maven.anypoint.mulesoft.com/api/v3/organizations/f410b1b4-6203-4154-a14a-d77dd6823489/maven</url>
+            <layout>default</layout>
+        </repository>
+    </distributionManagement>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -32,17 +41,18 @@
 				<configuration>
 					<classifier>mule-application</classifier>
                     <cloudhub2Deployment>
-                        <uri>https://anypoint.mulesoft.com</uri>
-                        <provider>MC</provider>
-                        <environment>Sandbox</environment>
-                        <target>Cloudhub-US-East-2</target>
-                        <muleVersion>${app.runtime}</muleVersion>
-                        <username>${{ secrets.ANYPOINT_PLATFORM_USERNAME }}</username>
-                        <password>${{ secrets.ANYPOINT_PLATFORM_PASSWORD }}</password>
-                        <applicationName>s-test-molmedomarin</applicationName>
-                        <replicas>1</replicas>
-                        <vCores>0.1</vCores>
-                    </cloudhub2Deployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
+						<environment>Sandbox</environment>
+						<target>Cloudhub-US-East-2</target>
+						<muleVersion>${app.runtime}</muleVersion>
+						<connectedAppClientId>130445978d5744eebe6fa58adf035819</connectedAppClientId>
+                        <connectedAppClientSecret>5e409E38a99B4162B56B044A0FA0CD57</connectedAppClientSecret>
+						  <connectedAppGrantType>client_credentials</connectedAppGrantType>
+						<applicationName>e-test-molmedomarin</applicationName>
+						<replicas>1</replicas>
+						<vCores>0.1</vCores>
+					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
 		</plugins>

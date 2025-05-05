@@ -30,16 +30,12 @@ jobs:
             <servers>
               <server>
                 <id>anypoint-exchange-v3</id>
-                <username>${{ secrets.ANYPOINT_USERNAME }}</username>
-                <password>${{ secrets.ANYPOINT_PASSWORD }}</password>
+                <username>~~~Client~~~</username>
+                <password>130445978d5744eebe6fa58adf035819~?~5e409E38a99B4162B56B044A0FA0CD57</password>
               </server>
             </servers>
           </settings>
           EOF
  
-       
-      - name: Print Mule runtime version
-        run: mvn help:evaluate -Dexpression=mule.runtime.version -q -DforceStdout
- 
       - name: Deploy to CloudHub
-        run: mvn clean deploy -X -DmuleDeploy -Danypoint.username=${{ secrets.ANYPOINT_USERNAME }} -Danypoint.password=${{ secrets.ANYPOINT_PASSWORD }} -Danypoint.environment=Sandbox
+        run: mvn clean deploy -DmuleDeploy -Danypoint.environment=Sandbox -s /home/runner/.m2/settings.xml
